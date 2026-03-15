@@ -1,0 +1,28 @@
+{
+  "name": "autonomous-defi-agent",
+  "private": true,
+  "description": "Autonomous DeFi Agent — Tether Hackathon Galáctica WDK Edition 1",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types",
+    "agent:start": "turbo run start --filter=@repo/agent",
+    "agent:dev": "turbo run dev --filter=@repo/agent"
+  },
+  "devDependencies": {
+    "prettier": "^3.7.4",
+    "turbo": "^2.8.16",
+    "typescript": "5.9.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@10.9.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
